@@ -11,7 +11,7 @@ mysql数据库执行ai-example\mcp-stdio-server\src\main\resources\dbscript下�
 
 # 源码地址
 
-[GitHub使用game分支](https://github.com/wangmeng1990/ai-example/tree/game)
+[GitHub使用Dev分支](https://github.com/Balchin-He/ai-example/tree/dev)
 
 # 项目配置修改
 1.到百炼平台申请api-key 
