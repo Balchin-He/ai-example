@@ -1,0 +1,54 @@
+spring:
+  ai:
+    dash-scope:
+#      api-key: ${DASHSCOPE_APIKEY}
+      api-key: 
+      chat:
+        options:
+          model: qwen-max
+
+
+    vectorstore:
+      redis:
+        initialize-schema: true
+
+    mcp:
+      client:
+        request-timeout: 60s
+        stdio:
+          # json配置方式目前只支持STDIO
+          servers-configuration: classpath:/mcp-servers-config.json
+
+  mandatory-file-encoding: UTF-8
+
+  data:
+    redis:
+      database: 0
+      timeout: 10s
+      host:
+      port: 6379
+      password: 123456
+      repositories:
+        enabled: false
+      lettuce:
+        pool:
+          max-active: 200
+          max-wait: -1ms
+          max-idle: 10
+          min-idle: 0
+
+#输入请求日志
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
+    io:
+      modelcontextprotocol:
+        client: DEBUG
+        spec: DEBUG
+
+

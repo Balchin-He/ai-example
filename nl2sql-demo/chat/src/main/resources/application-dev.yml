@@ -1,0 +1,40 @@
+spring:
+  ai:
+    #    dash-scope:
+    ##      api-key: ${DASHSCOPE_APIKEY}
+    #      api-key: 
+    openai:
+      api-key: 
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1  # 阿里云百炼平台兼容模式
+    dashscope:
+      embedding:
+        api-key: 
+      chat:
+        options:
+          model: qwen-max
+    vectorstore:
+      analytic:
+        regionId: cn-hangzhou
+        collectName: chatbi
+#      analyticdb:
+#        regionId: cn-shanghai  # 根据实际部署区域填写
+
+chatbi:
+  dbconfig:
+    url: jdbc:mysql://192.168.1.51:3306/base_ai?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false&allow
+    username: root
+    password: 123456
+    connectiontype: jdbc
+    dialecttype: mysql
+
+#输入请求日志
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
+
+
